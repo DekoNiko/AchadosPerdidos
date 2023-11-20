@@ -78,6 +78,7 @@
     <Compile Include="Business\LocalizacaoBusiness.cs" />
     <Compile Include="Business\ProdutoBusiness.cs" />
     <Compile Include="Data\Context\AchadosPerdidosContext.cs" />
+    <Compile Include="Data\CorRepository.cs" />
     <Compile Include="fHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +92,7 @@
     <Compile Include="Model\UsuarioModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\DropdownConvertUtil.cs" />
     <Compile Include="View\Produto\AddLostView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,9 +155,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Util\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>

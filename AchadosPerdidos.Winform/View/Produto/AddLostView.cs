@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AchadosPerdidos.Winform.Business;
+using AchadosPerdidos.Winform.Util;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,10 +16,18 @@ namespace AchadosPerdidos.Winform.View
 {
 	public partial class AddLostView : UserControl
 	{
+		private CorBusiness _corBusiness = new CorBusiness();
+
 		public AddLostView()
 		{
 			InitializeComponent();
+			PopulateDropDowns();
+		}
 
+		private void PopulateDropDowns()
+		{
+			DropdownConvertUtil.PopulateDropdown(cbxCor, _corBusiness.ListCor(), "Id", "Descricao");
+			//DropdownConvertUtil.PopulateDropdown(cbxMaterial, )
 		}
 
 		public void ClassTelas()
