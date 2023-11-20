@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 
 namespace AchadosPerdidos.Winform.Business
 {
-	public class CorBusiness
-	{
+    public class CorBusiness
+    {
 		private CorRepository _corRepository = new CorRepository();
 		public List<CorModel> ListCor()
 		{
@@ -23,11 +23,11 @@ namespace AchadosPerdidos.Winform.Business
 			var listCor = _corRepository.ListCor();
 
 			if (listCor.Any(cor => cor.Descricao.Trim().ToUpper() == model.Descricao.Trim().ToUpper()))
-			{
+        {
 				throw new Exception("Cor Existente");
 			}
 
 			_corRepository.InsertCor(model);
-		}
-	}
+        }
+    }
 }

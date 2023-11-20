@@ -33,6 +33,8 @@
 			this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.achadosEPerdidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.pnlHome = new System.Windows.Forms.Panel();
 			this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.pnlHome = new System.Windows.Forms.Panel();
 			this.menuStrip1.SuspendLayout();
@@ -92,6 +94,12 @@
 			this.pnlHome.Name = "pnlHome";
 			this.pnlHome.Size = new System.Drawing.Size(800, 396);
 			this.pnlHome.TabIndex = 1;
+			// 
+			// estoqueToolStripMenuItem
+			// 
+			this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
+			this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.estoqueToolStripMenuItem.Text = "Estoque";
 			// 
 			// fHome
 			// 
