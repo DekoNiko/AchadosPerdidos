@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AchadosPerdidos.Winform.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,5 +22,11 @@ namespace AchadosPerdidos.Winform
 		{
             this.Close();
 		}
+
+		private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            pnlHome.Controls.Clear();
+            pnlHome.Controls.Add(new AddLostView());
+ 		}
 	}
 }

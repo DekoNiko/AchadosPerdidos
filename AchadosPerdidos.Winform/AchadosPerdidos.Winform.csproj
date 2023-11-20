@@ -48,8 +48,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.5.1.1\lib\net462\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.20.69.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.20.69\lib\net462\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,6 +78,7 @@
     <Compile Include="Business\LocalizacaoBusiness.cs" />
     <Compile Include="Business\ProdutoBusiness.cs" />
     <Compile Include="Data\Context\AchadosPerdidosContext.cs" />
+    <Compile Include="Data\CorRepository.cs" />
     <Compile Include="fHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +92,30 @@
     <Compile Include="Model\UsuarioModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\AddLost.cs">
+    <Compile Include="Util\DropdownConvertUtil.cs" />
+    <Compile Include="View\Produto\AddLostView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\AddLost.Designer.cs">
-      <DependentUpon>AddLost.cs</DependentUpon>
+    <Compile Include="View\Produto\AddLostView.Designer.cs">
+      <DependentUpon>AddLostView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Produto\EscolherDBView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Produto\EscolherDBView.Designer.cs">
+      <DependentUpon>EscolherDBView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Produto\ImagemPerdidoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Produto\ImagemPerdidoView.Designer.cs">
+      <DependentUpon>ImagemPerdidoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Produto\NovoItemView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Produto\NovoItemView.Designer.cs">
+      <DependentUpon>NovoItemView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="fHome.resx">
       <DependentUpon>fHome.cs</DependentUpon>
@@ -96,9 +129,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\AddLost.resx">
-      <DependentUpon>AddLost.cs</DependentUpon>
+    <EmbeddedResource Include="View\Produto\AddLostView.resx">
+      <DependentUpon>AddLostView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Produto\EscolherDBView.resx">
+      <DependentUpon>EscolherDBView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Produto\ImagemPerdidoView.resx">
+      <DependentUpon>ImagemPerdidoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Produto\NovoItemView.resx">
+      <DependentUpon>NovoItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,9 +155,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Util\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>

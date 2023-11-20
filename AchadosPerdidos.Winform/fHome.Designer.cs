@@ -30,11 +30,13 @@
         {
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.achadosEPerdidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.pnlHome = new System.Windows.Forms.Panel();
 			this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.pnlHome = new System.Windows.Forms.Panel();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -57,6 +59,13 @@
 			this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
 			this.menuToolStripMenuItem.Text = "Menu";
 			// 
+			// sairToolStripMenuItem
+			// 
+			this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+			this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.sairToolStripMenuItem.Text = "Sair";
+			this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+			// 
 			// achadosEPerdidosToolStripMenuItem
 			// 
 			this.achadosEPerdidosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -69,15 +78,15 @@
 			// cadastrarToolStripMenuItem
 			// 
 			this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-			this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
 			this.cadastrarToolStripMenuItem.Text = "Cadastrar";
+			this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
 			// 
-			// sairToolStripMenuItem
+			// estoqueToolStripMenuItem
 			// 
-			this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-			this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.sairToolStripMenuItem.Text = "Sair";
-			this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+			this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
+			this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+			this.estoqueToolStripMenuItem.Text = "Estoque";
 			// 
 			// pnlHome
 			// 
@@ -101,7 +110,7 @@
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "fHome";
-			this.Text = "Dek Solutions";
+			this.Text = "DK Solutions";
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
