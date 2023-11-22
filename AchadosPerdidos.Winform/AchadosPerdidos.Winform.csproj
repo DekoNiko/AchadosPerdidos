@@ -79,6 +79,8 @@
     <Compile Include="Business\ProdutoBusiness.cs" />
     <Compile Include="Data\Context\AchadosPerdidosContext.cs" />
     <Compile Include="Data\CorRepository.cs" />
+    <Compile Include="Data\LocaliacaoRepository.cs" />
+    <Compile Include="Data\ProdutoRepository.cs" />
     <Compile Include="fHome.cs">
       <SubType>Form</SubType>
     </Compile>
