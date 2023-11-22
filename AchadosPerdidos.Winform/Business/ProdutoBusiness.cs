@@ -1,4 +1,5 @@
-﻿using AchadosPerdidos.Winform.Model;
+﻿using AchadosPerdidos.Winform.Data;
+using AchadosPerdidos.Winform.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,21 @@ namespace AchadosPerdidos.Winform.Business
 {
     public class ProdutoBusiness
     {
-        public List<ProdutoModel> ListarProduto()
+        private ProdutoRepository _produtoRepository = new ProdutoRepository();
+
+        public List<ProdutoModel> ListProduto()
         {
-            return new List<ProdutoModel>(); //TODO: CRIAR DEVOLUCAO PARA LISTAR PRODUTO;
+            return _produtoRepository.ListProduto(); //TODO: CRIAR DEVOLUCAO PARA LISTAR PRODUTO;
+        }
+
+        public void InsertMaterial(ProdutoModel produto)
+        {
+            var listMaterial = _produtoRepository.ListMaterial();
+            //if (listMaterial.Any(product => product.Descricao.Trim().ToUpper() == produto.Descricao.Trim().ToUpper()))
+            //IF DO PRODUTO: FALTA ALGUMA IDENTIFICACAO DO PRODUTO ESPECIFICO
+            {
+            //    throw new Exception("Produto Existente");
+            }
         }
 
         public int IncluirProduto(ProdutoModel produto)
@@ -24,5 +37,7 @@ namespace AchadosPerdidos.Winform.Business
         {
             //TODO: DESATIVAR O PRODUTO
         }
+
+
     }
 }
