@@ -13,21 +13,21 @@ namespace AchadosPerdidos.Winform.Business
 {
     public class CorBusiness
     {
-		private CorRepository _corRepository = new CorRepository();
-		public List<CorModel> ListCor()
-		{
-			return _corRepository.ListCor();
-		}
-		public void InsertCor(CorModel model)
-		{
-			var listCor = _corRepository.ListCor();
-
-			if (listCor.Any(cor => cor.Descricao.Trim().ToUpper() == model.Descricao.Trim().ToUpper()))
+        private CorRepository _corRepository = new CorRepository();
+        public List<CorModel> ListCor()
         {
-				throw new Exception("Cor Existente");
-			}
+            return _corRepository.ListCor();
+        }
+        public void InsertCor(CorModel model)
+        {
+            var listCor = _corRepository.ListCor();
 
-			_corRepository.InsertCor(model);
+            if (listCor.Any(cor => cor.Descricao.Trim().ToUpper() == model.Descricao.Trim().ToUpper()))
+            {
+                throw new Exception("Cor Existente");
+            }
+
+            _corRepository.InsertCor(model);
         }
     }
 }
