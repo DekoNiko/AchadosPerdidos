@@ -14,47 +14,31 @@ using System.Windows.Forms;
 
 namespace AchadosPerdidos.Winform.View
 {
-    public partial class LoginUserView : UserControl
-    {
-        public LoginUserView()
-        {
-            InitializeComponent();
-        }
+	public partial class LoginUserView : UserControl
+	{
+		public LoginUserView()
+		{
+			InitializeComponent();
+		}
 
-        public bool ValidarLogin()
-        {
-            var appHome = new fHome();
+		public void IrUser(UsuarioModel model)
+		{
 
-            if (string.IsNullOrEmpty(txbLoginUser.Text.ToString()) || string.IsNullOrEmpty(txbSenhaUser.Text.ToString()))
-            {
-                MessageBox.Show("Login ou Senha Incorreto", "Ops!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+		}
 
-                using (appHome);
-
-                return false;
-            }
-            else
-            {
-                //MessageBox.Show("Bem-vindo, \n" + txbLoginUser.Text);
-                return true;
-            }
-            
-        }
-        public void IrUser(UsuarioModel model)
-        {
-            
-        }
-
-        private void btnEntrarLogin_Click(object sender, EventArgs e)
-        {
-            bool validLogin = ValidarLogin();
-            var testValid = new UsuarioModel();
-
-            if (validLogin == true)
-            {
-                return;
-            }
-        }
-    }
+		private void btnEntrarLogin_Click(object sender, EventArgs e)
+		{
+			var user = new UsuarioModel() { Login = txbLoginUser.Text, Password = txbSenhaUser.Text };
+			
+			try
+			{
+				user.IsValidLogin();
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show(ex.Message, "Ops!",
+					MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
+		}
+	}
 }

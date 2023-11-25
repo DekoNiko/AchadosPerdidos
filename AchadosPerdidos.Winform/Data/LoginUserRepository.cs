@@ -11,6 +11,7 @@ namespace AchadosPerdidos.Winform.Data.Context
     {
         public LoginUserRepository()
         {
+
         }
 
         public List<UsuarioModel> ListUsers()

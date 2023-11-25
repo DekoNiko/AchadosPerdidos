@@ -21,7 +21,6 @@ namespace AchadosPerdidos.Winform.Business
         {
             var validUser = _loginUserRepository.ListUsers();
             var logarUser = new UsuarioModel();
-            var valid = logarUser.IsValidLogin();
 
             if (validUser.Any(user => user.Nome.Trim().ToUpper() == model.Nome.Trim().ToUpper()))
             {
