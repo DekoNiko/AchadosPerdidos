@@ -21,11 +21,6 @@ namespace AchadosPerdidos.Winform.View
 			InitializeComponent();
 		}
 
-		public void IrUser(UsuarioModel model)
-		{
-
-		}
-
 		private void btnEntrarLogin_Click(object sender, EventArgs e)
 		{
 			var user = new UsuarioModel() { Login = txbLoginUser.Text, Password = txbSenhaUser.Text };
@@ -39,6 +34,11 @@ namespace AchadosPerdidos.Winform.View
 				MessageBox.Show(ex.Message, "Ops!",
 					MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			}
+		}
+
+		private void btnSairLogin_Click(object sender, EventArgs e)
+		{
+			System.Windows.Forms.Application.Exit();
 		}
 	}
 }
