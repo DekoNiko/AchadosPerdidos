@@ -20,16 +20,15 @@ namespace AchadosPerdidos.Winform.View
 		{
 			InitializeComponent();
 		}
-
 		private void btnEntrarLogin_Click(object sender, EventArgs e)
 		{
 			var user = new UsuarioModel() { Login = txbLoginUser.Text, Password = txbSenhaUser.Text };
-			
+
 			try
 			{
 				user.IsValidLogin();
 			}
-			catch(Exception ex)
+			catch (Exception ex)
 			{
 				MessageBox.Show(ex.Message, "Ops!",
 					MessageBoxButtons.OK, MessageBoxIcon.Warning);

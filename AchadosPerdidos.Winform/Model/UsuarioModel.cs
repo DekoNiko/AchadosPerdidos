@@ -26,7 +26,6 @@ namespace AchadosPerdidos.Winform.Model
 			if (string.IsNullOrWhiteSpace(this.Login) || string.IsNullOrWhiteSpace(this.Password))
 				throw new Exception("Login ou Senha Incorreto");
 
-
 			var hashPass = HashPassword();
 		}
 
