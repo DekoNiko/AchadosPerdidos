@@ -19,7 +19,15 @@ namespace AchadosPerdidos.Winform.View
 		public LoginUserView()
 		{
 			InitializeComponent();
+			Layout();
 		}
+
+		public  void Layout()
+		{
+			BackColor = Color.CadetBlue;
+			BorderStyle = BorderStyle.FixedSingle;
+		}
+
 		private void btnEntrarLogin_Click(object sender, EventArgs e)
 		{
 			var user = new UsuarioModel() { Login = txbLoginUser.Text, Password = txbSenhaUser.Text };

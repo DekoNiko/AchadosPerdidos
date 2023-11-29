@@ -33,8 +33,8 @@
 			this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.achadosEPerdidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.pnlHome = new System.Windows.Forms.Panel();
 			this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.pnlHome = new System.Windows.Forms.Panel();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -60,7 +60,7 @@
 			// sairToolStripMenuItem
 			// 
 			this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-			this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.sairToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
 			this.sairToolStripMenuItem.Text = "Sair";
 			this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
 			// 
@@ -90,14 +90,8 @@
 			// 
 			this.pnlHome.Location = new System.Drawing.Point(0, 27);
 			this.pnlHome.Name = "pnlHome";
-			this.pnlHome.Size = new System.Drawing.Size(800, 396);
+			this.pnlHome.Size = new System.Drawing.Size(801, 398);
 			this.pnlHome.TabIndex = 1;
-			// 
-			// estoqueToolStripMenuItem
-			// 
-			this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
-			this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.estoqueToolStripMenuItem.Text = "Estoque";
 			// 
 			// fHome
 			// 

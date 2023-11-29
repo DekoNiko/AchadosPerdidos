@@ -19,7 +19,7 @@ namespace AchadosPerdidos.Winform
 		public fHome()
 		{
 			InitializeComponent();
-			menuStrip1.Enabled = false;
+			menuStrip1.Enabled = true;
 			TelaLogin();
 		}
 
@@ -30,6 +30,7 @@ namespace AchadosPerdidos.Winform
 			telaLogin.Top = (pnlHome.Height / 2) - (telaLogin.Height - 35);
 			telaLogin.Left = (pnlHome.Width / 2) - (telaLogin.Width - 80);
 			pnlHome.Controls.Add(telaLogin);
+			pnlHome.BackColor = Color.DimGray;
 		}
 
 		private void sairToolStripMenuItem_Click(object sender, EventArgs e)

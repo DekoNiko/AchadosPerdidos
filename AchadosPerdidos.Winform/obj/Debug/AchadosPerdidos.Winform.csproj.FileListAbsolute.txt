@@ -88,3 +88,7 @@ C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\bin\Debug\System.Collections
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\bin\Debug\System.Memory.xml
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\bin\Debug\System.Numerics.Vectors.xml
+C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\bin\Debug\EntityFramework.dll
+C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\bin\Debug\EntityFramework.xml
+C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\bin\Debug\EntityFramework.SqlServer.xml
