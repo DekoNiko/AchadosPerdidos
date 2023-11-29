@@ -9,9 +9,9 @@ namespace AchadosPerdidos.Winform.Business
 {
     public class LocalizacaoBusiness
     {
-        public List<LocalizacaoModel> ListarLocalizacao()
+        public List<SetorModel> ListarLocalizacao()
         {
-            return new List<LocalizacaoModel>(); //TODO: ADICIONAR LISTA DE LOCALIZACAO;
+            return new List<SetorModel>(); //TODO: ADICIONAR LISTA DE LOCALIZACAO;
         }
     }
 }

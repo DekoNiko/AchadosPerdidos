@@ -158,7 +158,7 @@
     <Compile Include="Data\Model\UsuarioData.cs" />
     <Compile Include="Data\LoginUserRepository.cs" />
     <Compile Include="Data\CorRepository.cs" />
-    <Compile Include="Data\LocaliacaoRepository.cs" />
+    <Compile Include="Data\SetorRepository.cs" />
     <Compile Include="Data\ProdutoRepository.cs" />
     <Compile Include="fHome.cs">
       <SubType>Form</SubType>
@@ -168,7 +168,7 @@
     </Compile>
     <Compile Include="Model\CorModel.cs" />
     <Compile Include="Model\DevolucaoModel.cs" />
-    <Compile Include="Model\LocalizacaoModel.cs" />
+    <Compile Include="Model\SetorModel.cs" />
     <Compile Include="Model\ProdutoModel.cs" />
     <Compile Include="Model\UsuarioModel.cs" />
     <Compile Include="Program.cs" />
