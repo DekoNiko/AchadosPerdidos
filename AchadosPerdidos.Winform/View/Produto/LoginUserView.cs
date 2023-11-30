@@ -1,5 +1,7 @@
 ﻿using AchadosPerdidos.Winform.Business;
+using AchadosPerdidos.Winform.Data.Context;
 using AchadosPerdidos.Winform.Model;
+using AchadosPerdidos.Winform.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,10 +18,14 @@ namespace AchadosPerdidos.Winform.View
 {
 	public partial class LoginUserView : UserControl
 	{
+		private UsuarioBusiness _usuarioBusiness = new UsuarioBusiness();
+
 		public LoginUserView()
 		{
 			InitializeComponent();
 			Layout();
+			txbLoginUser.Text = "nicodemos";
+			txbSenhaUser.Text = "1234";
 		}
 
 		public  void Layout()
@@ -30,11 +36,10 @@ namespace AchadosPerdidos.Winform.View
 
 		private void btnEntrarLogin_Click(object sender, EventArgs e)
 		{
-			var user = new UsuarioModel() { Login = txbLoginUser.Text, Password = txbSenhaUser.Text };
-
 			try
 			{
-				user.IsValidLogin();
+				var usuario = _usuarioBusiness.ValidarLogin(txbLoginUser.Text, txbSenhaUser.Text);
+				UsuarioSecao.LogarUsuario(usuario);
 			}
 			catch (Exception ex)
 			{

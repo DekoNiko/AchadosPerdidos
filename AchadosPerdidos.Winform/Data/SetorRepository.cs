@@ -1,4 +1,5 @@
 ﻿using AchadosPerdidos.Winform.Business;
+using AchadosPerdidos.Winform.Data.Context;
 using AchadosPerdidos.Winform.Model;
 using System;
 using System.Collections.Generic;
@@ -10,18 +11,21 @@ namespace AchadosPerdidos.Winform.Data
 {
 	public class SetorRepository
 	{
+		private AchadosPerdidosContext _context;
+
 		public SetorRepository()
 		{
+			_context = new AchadosPerdidosContext();
 		}
 
 		public List<SetorModel> ListaLocalizacao()
 		{
-			return listaLocalizacaoMock();
+			return _context.Setor.Select(s => new SetorModel { Id = s.IdSetor, Descricao = s.Descricao }).ToList();
 		}
 		 
 		public SetorModel GetLocalizacao(int id)
 		{
-			return new SetorModel();
+			return _context.Setor.Where(w => w.IdSetor == id).Select(s => new SetorModel { Id = s.IdSetor, Descricao = s.Descricao }).Single();
 		}
 
 		public void InsertLocalizacao(SetorModel model)

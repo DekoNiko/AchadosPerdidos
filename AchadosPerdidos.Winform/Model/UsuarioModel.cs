@@ -12,10 +12,11 @@ namespace AchadosPerdidos.Winform.Model
 {
 	public class UsuarioModel
 	{
-		private LoginUserBusiness _loginUserBusiness = new LoginUserBusiness();
+		private UsuarioBusiness _loginUserBusiness = new UsuarioBusiness();
 
 		public int Id { get; set; }
-		public string Nome { get; set; }
+
+		public string Username { get; set; }
 
 		public string Login { get; set; }
 
@@ -26,10 +27,9 @@ namespace AchadosPerdidos.Winform.Model
 			if (string.IsNullOrWhiteSpace(this.Login) || string.IsNullOrWhiteSpace(this.Password))
 				throw new Exception("Login ou Senha Incorreto");
 
-			var hashPass = HashPassword();
 		}
 
-		private string HashPassword()
+		public void HashPassword()
 		{
 			using (SHA256 sha256Hash = SHA256.Create())
 			{
@@ -44,7 +44,6 @@ namespace AchadosPerdidos.Winform.Model
 				}
 				this.Password = builder.ToString();
 			}
-			return this.Password;
 		}
 	}
 }

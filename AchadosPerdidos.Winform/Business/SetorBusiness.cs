@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace AchadosPerdidos.Winform.Business
 {
-    public class LocalizacaoBusiness
+    public class SetorBusiness
     {
-        public List<SetorModel> ListarLocalizacao()
+        public List<SetorModel> ListarSetor()
         {
             return new List<SetorModel>(); //TODO: ADICIONAR LISTA DE LOCALIZACAO;
         }

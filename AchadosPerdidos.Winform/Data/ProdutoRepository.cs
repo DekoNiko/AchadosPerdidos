@@ -1,4 +1,5 @@
-﻿using AchadosPerdidos.Winform.Model;
+﻿using AchadosPerdidos.Winform.Data.Context;
+using AchadosPerdidos.Winform.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,15 @@ namespace AchadosPerdidos.Winform.Data
 {
 	public class ProdutoRepository
 	{
+
+		private AchadosPerdidosContext _context;
+
 		public ProdutoRepository()
 		{
-
+			_context = new AchadosPerdidosContext();
 		}
 
-		public List<ProdutoModel> ListaMaterial()
+		public List<ProdutoModel> ListaProduto()
 		{
 			return ListaMaterialMock();
 		}

@@ -39,7 +39,6 @@ C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Wi
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.Properties.Resources.resources
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.View.LoginUserView.resources
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.View.AddLostView.resources
-C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.View.EscolherDBView.resources
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.View.ImagemPerdidoView.resources
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.View.NovoItemView.resources
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.csproj.GenerateResource.cache

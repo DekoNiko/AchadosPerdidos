@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AchadosPerdidos.Winform.Util;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace AchadosPerdidos.Winform.View
 	{
 		public NovoItemView()
 		{
+			if (!UsuarioSecao.SecaoAtiva())
+				new LoginUserView().Show();
 			InitializeComponent();
 		}
 	}

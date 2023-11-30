@@ -1,4 +1,5 @@
 ﻿using AchadosPerdidos.Winform.Model;
+using AchadosPerdidos.Winform.Util;
 using AchadosPerdidos.Winform.View;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,6 @@ namespace AchadosPerdidos.Winform
 {
 	public partial class fHome : Form
 	{
-
 		public fHome()
 		{
 			InitializeComponent();
@@ -33,15 +33,25 @@ namespace AchadosPerdidos.Winform
 			pnlHome.BackColor = Color.DimGray;
 		}
 
+		private void logarToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			TelaLogin();
+		}
+
 		private void sairToolStripMenuItem_Click(object sender, EventArgs e)
 		{
+			UsuarioSecao.DeslogarUsuario();
 			System.Windows.Forms.Application.Exit();
 		}
 
 		private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			pnlHome.Controls.Clear();
-			pnlHome.Controls.Add(new AddLostView());
+			if (!UsuarioSecao.SecaoAtiva())
+				TelaLogin();
+			else
+				pnlHome.Controls.Add(new AddLostView());
 		}
+
 	}
 }

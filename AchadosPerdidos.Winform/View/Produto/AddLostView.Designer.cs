@@ -34,7 +34,7 @@
 			this.label8 = new System.Windows.Forms.Label();
 			this.txbEntregador = new System.Windows.Forms.TextBox();
 			this.label7 = new System.Windows.Forms.Label();
-			this.cbxLocal = new System.Windows.Forms.ComboBox();
+			this.cbxSetor = new System.Windows.Forms.ComboBox();
 			this.label6 = new System.Windows.Forms.Label();
 			this.cbxMaterial = new System.Windows.Forms.ComboBox();
 			this.label5 = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
 			this.groupBox1.Controls.Add(this.label8);
 			this.groupBox1.Controls.Add(this.txbEntregador);
 			this.groupBox1.Controls.Add(this.label7);
-			this.groupBox1.Controls.Add(this.cbxLocal);
+			this.groupBox1.Controls.Add(this.cbxSetor);
 			this.groupBox1.Controls.Add(this.label6);
 			this.groupBox1.Controls.Add(this.cbxMaterial);
 			this.groupBox1.Controls.Add(this.label5);
@@ -118,13 +118,13 @@
 			this.label7.TabIndex = 8;
 			this.label7.Text = "Entregue por:";
 			// 
-			// cbxLocal
+			// cbxSetor
 			// 
-			this.cbxLocal.FormattingEnabled = true;
-			this.cbxLocal.Location = new System.Drawing.Point(9, 159);
-			this.cbxLocal.Name = "cbxLocal";
-			this.cbxLocal.Size = new System.Drawing.Size(121, 21);
-			this.cbxLocal.TabIndex = 7;
+			this.cbxSetor.FormattingEnabled = true;
+			this.cbxSetor.Location = new System.Drawing.Point(9, 159);
+			this.cbxSetor.Name = "cbxSetor";
+			this.cbxSetor.Size = new System.Drawing.Size(121, 21);
+			this.cbxSetor.TabIndex = 7;
 			// 
 			// label6
 			// 
@@ -287,7 +287,7 @@
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.TextBox txbEntregador;
 		private System.Windows.Forms.Label label7;
-		private System.Windows.Forms.ComboBox cbxLocal;
+		private System.Windows.Forms.ComboBox cbxSetor;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.ComboBox cbxMaterial;
 		private System.Windows.Forms.Label label5;

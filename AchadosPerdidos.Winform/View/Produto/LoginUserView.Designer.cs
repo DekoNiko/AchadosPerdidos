@@ -76,6 +76,7 @@
 			// 
 			this.txbSenhaUser.Location = new System.Drawing.Point(6, 76);
 			this.txbSenhaUser.Name = "txbSenhaUser";
+			this.txbSenhaUser.PasswordChar = '*';
 			this.txbSenhaUser.Size = new System.Drawing.Size(167, 20);
 			this.txbSenhaUser.TabIndex = 5;
 			// 

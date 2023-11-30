@@ -15,46 +15,64 @@ using System.Windows.Forms;
 
 namespace AchadosPerdidos.Winform.View
 {
-    public partial class AddLostView : UserControl
-    {
-        private CorBusiness _corBusiness = new CorBusiness();
+	public partial class AddLostView : UserControl
+	{
+		private CorBusiness _corBusiness = new CorBusiness();
+		private SetorBusiness _setorBusiness = new SetorBusiness();
 
-        public AddLostView()
-        {
-            InitializeComponent();
-            PopulateDropDowns();
-        }
+		public AddLostView()
+		{
+			InitializeComponent();
+			Layout();
+			if (!UsuarioSecao.SecaoAtiva())
+			{
+				this.Hide();
+			}
+			PopulateDropDowns();
+			PopulateForm();
 
-        private void PopulateDropDowns()
-        {
-            DropdownConvertUtil.PopulateDropdown(cbxCor, _corBusiness.ListCor(), "Id", "Descricao");
-            //DropdownConvertUtil.PopulateDropdown(cbxMaterial,  )
-        }
+		}
 
-        public void ClassTelas()
-        {
-            pnlImagem.Controls.Clear();
-            var imagemPerdido = new ImagemPerdidoView();
-            if (ckbNovoitem.Checked)
-            {
-                imagemPerdido.Enabled = false;
-                pnlImagem.Controls.Add(new NovoItemView());
-            }
-            else if (!string.IsNullOrWhiteSpace(txbProduto.Text))
-            {
-                pnlImagem.Controls.Add(imagemPerdido);
-            }
-        }
+		public void Layout()
+		{
+			this.BackColor = Color.GhostWhite;
+		}
 
-        private void ckbNovoitem_CheckedChanged(object sender, EventArgs e)
-        {
-            ClassTelas();
-        }
+		private void PopulateDropDowns()
+		{
+			DropdownConvertUtil.PopulateDropdown(cbxCor, _corBusiness.ListCor(), "Id", "Descricao");
+			DropdownConvertUtil.PopulateDropdown(cbxSetor, _setorBusiness.ListarSetor(), "Id", "Descricao");
+		}
+		private void PopulateForm()
+		{
+			txbUsuario.Text = UsuarioSecao.GetUsername();
+			txbUsuario.ReadOnly = true;
+		}
 
-        private void txbProduto_TextChanged(object sender, EventArgs e)
-        {
-            ClassTelas();
-        }
+		public void ClassTelas()
+		{
+			pnlImagem.Controls.Clear();
+			var imagemPerdido = new ImagemPerdidoView();
+			if (ckbNovoitem.Checked)
+			{
+				imagemPerdido.Enabled = false;
+				pnlImagem.Controls.Add(new NovoItemView());
+			}
+			else if (!string.IsNullOrWhiteSpace(txbProduto.Text))
+			{
+				pnlImagem.Controls.Add(imagemPerdido);
+			}
+		}
 
-    }
+		private void ckbNovoitem_CheckedChanged(object sender, EventArgs e)
+		{
+			ClassTelas();
+		}
+
+		private void txbProduto_TextChanged(object sender, EventArgs e)
+		{
+			ClassTelas();
+		}
+
+	}
 }
