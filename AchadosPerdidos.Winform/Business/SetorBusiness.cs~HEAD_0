@@ -1,0 +1,39 @@
+﻿using AchadosPerdidos.Winform.Data;
+using AchadosPerdidos.Winform.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AchadosPerdidos.Winform.Business
+<<<<<<< HEAD:AchadosPerdidos.Winform/Business/SetorBusiness.cs
+{
+    public class SetorBusiness
+    {
+        public List<SetorModel> ListarSetor()
+        {
+            return new List<SetorModel>(); //TODO: ADICIONAR LISTA DE LOCALIZACAO;
+=======
+{
+    public class LocalizacaoBusiness
+    {
+        private LocalizacaoRepository _localizacaoRepository = new LocalizacaoRepository();
+        public List<LocalizacaoModel> ListLocalizacao()
+        {
+            return _localizacaoRepository.ListLocalizacao(); //TODO: ADICIONAR LISTA DE LOCALIZACAO;
+        }
+        public void InsertLocalizacao(LocalizacaoModel localizacao)
+        {
+            var listLocalizacao = _localizacaoRepository.ListLocalizacao();
+
+            if (listLocalizacao.Any(local => local.Descricao.Trim().ToUpper() == localizacao.Descricao.Trim().ToUpper()))
+            {
+                throw new Exception("Local Existente");
+            }
+
+            _localizacaoRepository.InsertLocalizacao(localizacao);
+>>>>>>> Atualizacao_no_trabalho:AchadosPerdidos.Winform/Business/LocalizacaoBusiness.cs
+        }
+    }
+}

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace AchadosPerdidos.Winform.Model
 {
+<<<<<<< HEAD
 	public class UsuarioModel
 	{
 		private UsuarioBusiness _loginUserBusiness = new UsuarioBusiness();
@@ -46,4 +47,45 @@ namespace AchadosPerdidos.Winform.Model
 			}
 		}
 	}
+=======
+    public class UsuarioModel
+    {
+        private UsuarioBusiness _loginUserBusiness = new UsuarioBusiness();
+
+        public int Id { get; set; }
+
+        public int IsAdmin { get; set; }
+
+        public string Username { get; set; }
+
+        public string Login { get; set; }
+
+        public string Password { get; set; }
+
+
+        public void IsValidLogin()
+        {
+            if (string.IsNullOrWhiteSpace(this.Login) || string.IsNullOrWhiteSpace(this.Password))
+                throw new Exception("Login ou Senha Incorreto");
+
+        }
+
+        public void HashPassword()
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                // Converte a senha para um array de bytes
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(this.Password));
+
+                // Converte o array de bytes para uma string hexadecimal
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                this.Password = builder.ToString();
+            }
+        }
+    }
+>>>>>>> Atualizacao_no_trabalho
 }
