@@ -16,10 +16,6 @@ namespace AchadosPerdidos.Winform
 {
 	public partial class fHome : Form
 	{
-<<<<<<< HEAD
-=======
-		private ModulosMenuModel _modulosMenuModel;
->>>>>>> Atualizacao_no_trabalho
 		public fHome()
 		{
 			InitializeComponent();
@@ -57,34 +53,5 @@ namespace AchadosPerdidos.Winform
 				pnlHome.Controls.Add(new AddLostView());
 		}
 
-<<<<<<< HEAD
 	}
-=======
-        #region ModulosMenuStrip
-		/*
-		public ToolStripItemCollection MenuStripColecao
-		{
-			get { return menuStrip1.Items; }
-			set
-			{
-				menuStrip1.Items.Clear();
-				foreach (var elem in value)
-				{ menuStrip1.Items.Add((ToolStripItem)elem); }
-			}
-		}
-
-		public void AtribuirModulos(ModulosMenuModel model)
-		{
-			List<MenuStrip> allitems = new List<MenuStrip>();
-			foreach (MenuStrip menu in menuStrip1.Items)
-			{ allitems.Add(menu);
-				//allitems.AddRange(GetItems(menu));
-			}
-
-		}
-		*/
-        #endregion
-
-    }
->>>>>>> Atualizacao_no_trabalho
 }

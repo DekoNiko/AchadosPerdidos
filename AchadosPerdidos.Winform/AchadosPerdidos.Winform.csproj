@@ -148,10 +148,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\CorBusiness.cs" />
-<<<<<<< HEAD
-=======
-    <Compile Include="Business\ModulosMenuBusiness.cs" />
->>>>>>> Atualizacao_no_trabalho
     <Compile Include="Business\SetorBusiness.cs" />
     <Compile Include="Business\UsuarioBusiness.cs" />
     <Compile Include="Business\ProdutoBusiness.cs" />
@@ -172,20 +168,12 @@
     </Compile>
     <Compile Include="Model\CorModel.cs" />
     <Compile Include="Model\DevolucaoModel.cs" />
-<<<<<<< HEAD
-=======
-    <Compile Include="Model\ModulosMenuModel.cs" />
->>>>>>> Atualizacao_no_trabalho
     <Compile Include="Model\SetorModel.cs" />
     <Compile Include="Model\ProdutoModel.cs" />
     <Compile Include="Model\UsuarioModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\DropdownConvertUtil.cs" />
-<<<<<<< HEAD
-=======
-    <Compile Include="Util\ModulosMenuUtil.cs" />
->>>>>>> Atualizacao_no_trabalho
     <Compile Include="Util\UsuarioSecao.cs" />
     <Compile Include="View\Produto\LoginUserView.cs">
       <SubType>UserControl</SubType>
