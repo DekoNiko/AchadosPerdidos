@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace AchadosPerdidos.Winform.View
 {
-	public partial class NovoItemView : UserControl
+	public partial class ConsultarItensView : UserControl
 	{
-		public NovoItemView()
+		public ConsultarItensView()
 		{
 			if (!UsuarioSecao.SecaoAtiva())
 				new LoginUserView().Show();

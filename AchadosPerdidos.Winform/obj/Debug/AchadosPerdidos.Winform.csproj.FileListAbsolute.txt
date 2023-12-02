@@ -40,7 +40,6 @@ C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Wi
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.View.LoginUserView.resources
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.View.AddLostView.resources
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.View.ImagemPerdidoView.resources
-C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.View.NovoItemView.resources
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.csproj.GenerateResource.cache
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.csproj.CoreCompileInputs.cache
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.csproj.CopyComplete
@@ -91,3 +90,4 @@ C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\bin\Debug\EntityFramework.dl
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\bin\Debug\EntityFramework.SqlServer.dll
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\bin\Debug\EntityFramework.xml
 C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projetos\AchadosPerdidos\AchadosPerdidos.Winform\obj\Debug\AchadosPerdidos.Winform.View.ConsultarItensView.resources

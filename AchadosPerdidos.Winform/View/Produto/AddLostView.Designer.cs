@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.ckbNovoitem = new System.Windows.Forms.CheckBox();
+			this.ckbListaCadastro = new System.Windows.Forms.CheckBox();
 			this.txbObs = new System.Windows.Forms.TextBox();
 			this.label8 = new System.Windows.Forms.Label();
 			this.txbEntregador = new System.Windows.Forms.TextBox();
@@ -55,7 +55,7 @@
 			// 
 			// groupBox1
 			// 
-			this.groupBox1.Controls.Add(this.ckbNovoitem);
+			this.groupBox1.Controls.Add(this.ckbListaCadastro);
 			this.groupBox1.Controls.Add(this.txbObs);
 			this.groupBox1.Controls.Add(this.label8);
 			this.groupBox1.Controls.Add(this.txbEntregador);
@@ -75,16 +75,16 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Cadastro";
 			// 
-			// ckbNovoitem
+			// ckbListaCadastro
 			// 
-			this.ckbNovoitem.AutoSize = true;
-			this.ckbNovoitem.Location = new System.Drawing.Point(135, 8);
-			this.ckbNovoitem.Name = "ckbNovoitem";
-			this.ckbNovoitem.Size = new System.Drawing.Size(75, 17);
-			this.ckbNovoitem.TabIndex = 12;
-			this.ckbNovoitem.Text = "Novo Item";
-			this.ckbNovoitem.UseVisualStyleBackColor = true;
-			this.ckbNovoitem.CheckedChanged += new System.EventHandler(this.ckbNovoitem_CheckedChanged);
+			this.ckbListaCadastro.AutoSize = true;
+			this.ckbListaCadastro.Location = new System.Drawing.Point(135, 8);
+			this.ckbListaCadastro.Name = "ckbListaCadastro";
+			this.ckbListaCadastro.Size = new System.Drawing.Size(93, 17);
+			this.ckbListaCadastro.TabIndex = 12;
+			this.ckbListaCadastro.Text = "Lista Cadastro";
+			this.ckbListaCadastro.UseVisualStyleBackColor = true;
+			this.ckbListaCadastro.CheckedChanged += new System.EventHandler(this.ckbNovoitem_CheckedChanged);
 			// 
 			// txbObs
 			// 
@@ -295,6 +295,6 @@
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TextBox txbProduto;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.CheckBox ckbNovoitem;
+		private System.Windows.Forms.CheckBox ckbListaCadastro;
 	}
 }

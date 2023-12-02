@@ -34,6 +34,8 @@
 			this.txbLoginUser = new System.Windows.Forms.TextBox();
 			this.txbSenhaUser = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
+			this.lblGetUsuario = new System.Windows.Forms.Label();
+			this.lblGetUsername = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// btnEntrarLogin
@@ -89,6 +91,25 @@
 			this.label2.TabIndex = 4;
 			this.label2.Text = "Senha:";
 			// 
+			// lblGetUsuario
+			// 
+			this.lblGetUsuario.AutoSize = true;
+			this.lblGetUsuario.Location = new System.Drawing.Point(4, 1);
+			this.lblGetUsuario.Name = "lblGetUsuario";
+			this.lblGetUsuario.Size = new System.Drawing.Size(46, 13);
+			this.lblGetUsuario.TabIndex = 6;
+			this.lblGetUsuario.Text = "Usuario:";
+			// 
+			// lblGetUsername
+			// 
+			this.lblGetUsername.AutoSize = true;
+			this.lblGetUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblGetUsername.Location = new System.Drawing.Point(-1, 19);
+			this.lblGetUsername.Name = "lblGetUsername";
+			this.lblGetUsername.Size = new System.Drawing.Size(183, 31);
+			this.lblGetUsername.TabIndex = 7;
+			this.lblGetUsername.Text = "GetUsername";
+			// 
 			// LoginUserView
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,6 +120,8 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnSairLogin);
 			this.Controls.Add(this.btnEntrarLogin);
+			this.Controls.Add(this.lblGetUsername);
+			this.Controls.Add(this.lblGetUsuario);
 			this.Name = "LoginUserView";
 			this.Size = new System.Drawing.Size(182, 139);
 			this.ResumeLayout(false);
@@ -114,5 +137,7 @@
         private System.Windows.Forms.TextBox txbLoginUser;
         private System.Windows.Forms.TextBox txbSenhaUser;
         private System.Windows.Forms.Label label2;
-    }
+		private System.Windows.Forms.Label lblGetUsuario;
+		private System.Windows.Forms.Label lblGetUsername;
+	}
 }

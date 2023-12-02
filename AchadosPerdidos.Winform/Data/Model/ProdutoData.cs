@@ -17,11 +17,15 @@ namespace AchadosPerdidos.Winform.Data.Model
 		[StringLength(50)]
 		public string Descricao { get; set; }
 
+		public string Material { get; set; }
+
 		public int IdCor { get; set; }
 
 		public int IdSetor { get; set; }
 
 		public DateTime DtCriacao { get; set; }
+
+		public DateTime DtAtualizacao { get; set; }
 
 		public int IdUsuarioCriacao { get; set; }
 

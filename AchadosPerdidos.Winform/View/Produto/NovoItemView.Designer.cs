@@ -1,6 +1,6 @@
 ﻿namespace AchadosPerdidos.Winform.View
 {
-	partial class NovoItemView
+	partial class ConsultarItensView
 	{
 		/// <summary> 
 		/// Required designer variable.

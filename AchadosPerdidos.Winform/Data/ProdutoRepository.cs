@@ -2,6 +2,7 @@ using AchadosPerdidos.Winform.Data.Context;
 using AchadosPerdidos.Winform.Model;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,8 @@ namespace AchadosPerdidos.Winform.Data
 {
 	public class ProdutoRepository
 	{
-        private AchadosPerdidosContext _context;
-       
+		private AchadosPerdidosContext _context;
+
 		public ProdutoRepository()
 		{
 			_context = new AchadosPerdidosContext();
@@ -19,12 +20,12 @@ namespace AchadosPerdidos.Winform.Data
 
 		public List<ProdutoModel> ListaProduto()
 		{
-			return _context.Produto.Select(s => new ProdutoModel { Id = s.Id.Produto, DataCriacao = s.DataCriacao, DataAtualizacao = s.DataAtualizacao }).ToList();
+			return _context.Produto.Select(s => new ProdutoModel { Id = s.IdProduto, DataCriacao = s.DtCriacao, DataAtualizacao = s.DtAtualizacao, Material = s.Material }).ToList();
 		}
 
 		public ProdutoModel GetProduto(int id)
 		{
-			return _context.Produto.Where(w => w.IdProduto == id).Select(s => new ProdutoModel { Id = s.Id.Produto, DataCriacao = s.DataCriacao, DataAtualizacao = s.DataAtualizacao }).Single();
+			return _context.Produto.Where(w => w.IdProduto == id).Select(s => new ProdutoModel { Id = s.IdProduto, DataCriacao = s.DtCriacao, DataAtualizacao = s.DtAtualizacao, Material = s.Material }).Single();
 		}
 
 		public void InsertProduto(ProdutoModel model)

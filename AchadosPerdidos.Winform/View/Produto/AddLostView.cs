@@ -19,6 +19,7 @@ namespace AchadosPerdidos.Winform.View
 	{
 		private CorBusiness _corBusiness = new CorBusiness();
 		private SetorBusiness _setorBusiness = new SetorBusiness();
+		private ProdutoBusiness _produtoBusiness = new ProdutoBusiness();
 
 		public AddLostView()
 		{
@@ -42,6 +43,7 @@ namespace AchadosPerdidos.Winform.View
 		{
 			DropdownConvertUtil.PopulateDropdown(cbxCor, _corBusiness.ListCor(), "Id", "Descricao");
 			DropdownConvertUtil.PopulateDropdown(cbxSetor, _setorBusiness.ListarSetor(), "Id", "Descricao");
+			DropdownConvertUtil.PopulateDropdown(cbxMaterial, _produtoBusiness.ListarProduto(), "Id", "Material");
 		}
 		private void PopulateForm()
 		{
@@ -53,10 +55,10 @@ namespace AchadosPerdidos.Winform.View
 		{
 			pnlImagem.Controls.Clear();
 			var imagemPerdido = new ImagemPerdidoView();
-			if (ckbNovoitem.Checked)
+			if (ckbListaCadastro.Checked)
 			{
 				imagemPerdido.Enabled = false;
-				pnlImagem.Controls.Add(new NovoItemView());
+				pnlImagem.Controls.Add(new ConsultarItensView());
 			}
 			else if (!string.IsNullOrWhiteSpace(txbProduto.Text))
 			{

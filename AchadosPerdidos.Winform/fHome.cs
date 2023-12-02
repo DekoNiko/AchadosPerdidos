@@ -21,10 +21,18 @@ namespace AchadosPerdidos.Winform
 			InitializeComponent();
 			menuStrip1.Enabled = true;
 			TelaLogin();
+			this.ControlBox = false;
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 		}
 
 		public void TelaLogin()
 		{
+			#region Paleta de cores
+			var corPrincipal = Color.DarkSlateBlue;
+			var corBranca = Color.White;
+			#endregion
+
 			pnlHome.Controls.Clear();
 			var telaLogin = new LoginUserView();
 			telaLogin.Top = (pnlHome.Height / 2) - (telaLogin.Height - 35);
@@ -33,7 +41,11 @@ namespace AchadosPerdidos.Winform
 			pnlHome.BackColor = Color.DimGray;
 
 			#region CorMenu
-			menuStrip1.BackColor = Color.DimGray;
+			lblLogotipo.BackColor = corPrincipal;
+			lblLogotipo.ForeColor = corBranca;
+			menuStrip1.BackColor = corPrincipal;
+			achadosEPerdidosToolStripMenuItem.ForeColor = corBranca;
+			menuToolStripMenuItem.ForeColor = corBranca;
 			#endregion
 		}
 
@@ -63,6 +75,11 @@ namespace AchadosPerdidos.Winform
 			cadastrarToolStripMenuItem.Visible = false;
 			estoqueToolStripMenuItem.Visible = false;
 			return MenuModules();
+		}
+
+		private void novoToolStripMenuItem_Click(object sender, EventArgs e)
+		{//CRIAR USUARIO
+			pnlHome.Controls.Clear();
 		}
 
 	}
