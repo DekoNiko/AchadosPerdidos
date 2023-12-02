@@ -31,6 +31,10 @@ namespace AchadosPerdidos.Winform
 			telaLogin.Left = (pnlHome.Width / 2) - (telaLogin.Width - 80);
 			pnlHome.Controls.Add(telaLogin);
 			pnlHome.BackColor = Color.DimGray;
+
+			#region CorMenu
+			menuStrip1.BackColor = Color.DimGray;
+			#endregion
 		}
 
 		private void logarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,6 +55,14 @@ namespace AchadosPerdidos.Winform
 				TelaLogin();
 			else
 				pnlHome.Controls.Add(new AddLostView());
+		}
+
+		public List<object> MenuModules()
+		{
+			novoToolStripMenuItem.Visible = false;
+			cadastrarToolStripMenuItem.Visible = false;
+			estoqueToolStripMenuItem.Visible = false;
+			return MenuModules();
 		}
 
 	}

@@ -30,12 +30,13 @@
         {
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.logarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.achadosEPerdidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.pnlHome = new System.Windows.Forms.Panel();
-			this.logarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -54,10 +55,18 @@
 			// 
 			this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.logarToolStripMenuItem,
+            this.novoToolStripMenuItem,
             this.sairToolStripMenuItem});
 			this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
 			this.menuToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
 			this.menuToolStripMenuItem.Text = "Usuario";
+			// 
+			// logarToolStripMenuItem
+			// 
+			this.logarToolStripMenuItem.Name = "logarToolStripMenuItem";
+			this.logarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.logarToolStripMenuItem.Text = "Acessar";
+			this.logarToolStripMenuItem.Click += new System.EventHandler(this.logarToolStripMenuItem_Click);
 			// 
 			// sairToolStripMenuItem
 			// 
@@ -95,12 +104,11 @@
 			this.pnlHome.Size = new System.Drawing.Size(801, 398);
 			this.pnlHome.TabIndex = 1;
 			// 
-			// logarToolStripMenuItem
+			// novoToolStripMenuItem
 			// 
-			this.logarToolStripMenuItem.Name = "logarToolStripMenuItem";
-			this.logarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.logarToolStripMenuItem.Text = "Acessar";
-			this.logarToolStripMenuItem.Click += new System.EventHandler(this.logarToolStripMenuItem_Click);
+			this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
+			this.novoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.novoToolStripMenuItem.Text = "Novo";
 			// 
 			// fHome
 			// 
@@ -129,6 +137,7 @@
 		private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem;
 		private System.Windows.Forms.Panel pnlHome;
 		private System.Windows.Forms.ToolStripMenuItem logarToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem novoToolStripMenuItem;
 	}
 }
 

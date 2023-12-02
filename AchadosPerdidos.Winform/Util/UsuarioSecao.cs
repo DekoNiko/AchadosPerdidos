@@ -35,5 +35,10 @@ namespace AchadosPerdidos.Winform.Util
 			return secao.Username;
 		}
 
+		public static bool GetIsAdmin()
+		{
+			return secao.IsAdmin;
+		}
+
 	}
 }

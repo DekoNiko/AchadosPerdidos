@@ -18,13 +18,13 @@ namespace AchadosPerdidos.Winform.Data.Context
 
 		public List<UsuarioModel> ListarUsuario()
 		{
-			return _context.Usuario.Select(s => new UsuarioModel { Id = s.IdUsuario, Login = s.Login, Username = s.Username, Password = s.Password }).ToList();
+			return _context.Usuario.Select(s => new UsuarioModel { Id = s.IdUsuario, Login = s.Login, Username = s.Username, Password = s.Password, IsAdmin = (bool)s.IsAdmin }).ToList();
 		}
 
 		public UsuarioModel GetUsuario(int id)
 		{
 			return _context.Usuario.Where(w => w.IdUsuario == id)
-				.Select(s => new UsuarioModel { Id = s.IdUsuario, Login = s.Login, Username = s.Username, Password = s.Password }).Single();
+				.Select(s => new UsuarioModel { Id = s.IdUsuario, Login = s.Login, Username = s.Username, Password = s.Password, IsAdmin = (bool)s.IsAdmin }).Single();
 		}
 
 		public void InsertUsuario(UsuarioModel model)
@@ -35,7 +35,7 @@ namespace AchadosPerdidos.Winform.Data.Context
 		public UsuarioModel GetUsuarioByLoginPassword(string login, string password)
 		{
 			return _context.Usuario.Where(w => w.Login == login && w.Password == password)
-				.Select(s => new UsuarioModel { Id = s.IdUsuario, Login = s.Login, Username = s.Username, Password = s.Password }).SingleOrDefault();
+				.Select(s => new UsuarioModel { Id = s.IdUsuario, Login = s.Login, Username = s.Username, Password = s.Password, IsAdmin = (bool)s.IsAdmin }).SingleOrDefault();
 		}
 
 
