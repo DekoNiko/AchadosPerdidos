@@ -194,6 +194,7 @@
 			this.btnSalvar.TabIndex = 1;
 			this.btnSalvar.Text = "Salvar";
 			this.btnSalvar.UseVisualStyleBackColor = true;
+			this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
 			// 
 			// btnDescartar
 			// 

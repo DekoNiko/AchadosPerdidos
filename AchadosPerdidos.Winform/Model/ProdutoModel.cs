@@ -13,9 +13,9 @@ namespace AchadosPerdidos.Winform.Model
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public string Observacao { get; set; }
-        public string Material { get; set; }
+        public int IdMaterial { get; set; }
         public int IdCor { get; set; }
-        public int IdLocalizacao { get; set; }
+        public int IdSetor { get; set; }
         public DateTime DataCriacao { get; set; }
         public DateTime DataAtualizacao { get; set; }
         public bool Devolvido { get; set; }

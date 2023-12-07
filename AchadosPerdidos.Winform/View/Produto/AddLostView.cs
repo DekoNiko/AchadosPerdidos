@@ -31,7 +31,6 @@ namespace AchadosPerdidos.Winform.View
 			}
 			PopulateDropDowns();
 			PopulateForm();
-
 		}
 
 		public void Layout()
@@ -50,7 +49,6 @@ namespace AchadosPerdidos.Winform.View
 			txbUsuario.Text = UsuarioSecao.GetUsername();
 			txbUsuario.ReadOnly = true;
 		}
-
 		public void ClassTelas()
 		{
 			pnlImagem.Controls.Clear();
@@ -76,5 +74,18 @@ namespace AchadosPerdidos.Winform.View
 			ClassTelas();
 		}
 
+		private void btnSalvar_Click(object sender, EventArgs e)
+		{
+			ProdutoModel produto = new ProdutoModel()
+			{
+				Nome = txbProduto.Text,
+				IdCor = Convert.ToInt32(cbxCor.SelectedValue.ToString()),
+				IdMaterial = Convert.ToInt32(cbxMaterial.SelectedValue.ToString()),
+				IdSetor = Convert.ToInt32(cbxSetor.SelectedValue.ToString()),
+				Descricao = txbObs.Text,
+			};
+			_produtoBusiness.IncluirProduto(produto);
+
+		}
 	}
 }
