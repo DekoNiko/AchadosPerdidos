@@ -31,6 +31,11 @@ namespace AchadosPerdidos.Winform.Model
 
 		}
 
+		public void SignInValid()
+		{
+			if(this is null || this.Id == 0)
+				throw new Exception("Usuario invalido!");
+		}
 		public void HashPassword()
 		{
 			using (SHA256 sha256Hash = SHA256.Create())

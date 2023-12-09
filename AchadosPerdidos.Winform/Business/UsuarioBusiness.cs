@@ -20,15 +20,21 @@ namespace AchadosPerdidos.Winform.Business
 
 		public UsuarioModel ValidarLogin(string login, string password)
 		{
-			var model = new UsuarioModel() { Login = login, Password = password };
+			var model = MappingUserModel(login, password);
 			model.IsValidLogin();
 			model.HashPassword();
-			var usuario = _usuarioRepository.GetUsuarioByLoginPassword(model.Login, model.Password);
+			model = _usuarioRepository.GetUsuarioByLoginPassword(model.Login, model.Password);
 
-			if (usuario is null || usuario.Id == 0)
-				throw new Exception("Usuario invalido!");
+			model.SignInValid();
 
-			return usuario;
+			return model;
 		}
+
+		#region Mappings
+		private UsuarioModel MappingUserModel(string login, string password)
+		{
+			return new UsuarioModel() { Login = login, Password = password };
+		}
+		#endregion
 	}
 }
